@@ -1,0 +1,31 @@
+{
+  "name": "macoshita.github.io",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "push-dir": "push-dir --dir=dist --branch=master --cleanup",
+    "deploy": "npm-run-all generate push-dir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "macoshita <macoshita@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.1.1",
+    "front-matter": "^2.3.0",
+    "markdown-it": "^8.4.1",
+    "markdown-with-front-matter-loader": "^0.1.0",
+    "nuxt": "^1.4.0"
+  },
+  "devDependencies": {
+    "globby": "^8.0.1",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "pug": "^2.0.1",
+    "pug-loader": "^2.3.0",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^6.0.7"
+  }
+}
