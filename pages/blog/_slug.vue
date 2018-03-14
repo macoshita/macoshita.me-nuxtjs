@@ -19,9 +19,10 @@ export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
     const date = slug.replace(/^(\d{4}-\d{2}-\d{2}).*/, '$1')
-    const data = await import(`~/blog/${slug}.md`)
-    const title = data.title
-    const content = data.__content
+    const data = await import(`raw-loader!~/blog/${slug}.md`)
+    const { attributes, body } = fm(data)
+    const title = attributes.title
+    const content = md.render(body)
 
     return {
       title,

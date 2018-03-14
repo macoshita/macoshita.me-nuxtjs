@@ -16,7 +16,6 @@
     "@nuxtjs/axios": "^5.1.1",
     "front-matter": "^2.3.0",
     "markdown-it": "^8.4.1",
-    "markdown-with-front-matter-loader": "^0.1.0",
     "nuxt": "^1.4.0"
   },
   "devDependencies": {
@@ -26,6 +25,7 @@
     "pug": "^2.0.1",
     "pug-loader": "^2.3.0",
     "push-dir": "^0.4.1",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.7"
   }
 }

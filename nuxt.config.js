@@ -9,13 +9,5 @@ module.exports = {
       const paths = await globby('*', { cwd: './blog/' })
       return paths.map(p => '/blog/' + p.replace(/\.md$/, ''))
     }
-  },
-  build: {
-    extend (config) {
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'markdown-with-front-matter-loader'
-      })
-    }
   }
 }
