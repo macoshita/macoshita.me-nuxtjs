@@ -4,14 +4,13 @@ article
     h2 blog
   ul
     li(v-for="post in posts", :key="post.slug")
-      nuxt-link(:to="`/blog/${post.slug}/`") {{ post.slug }}
+      nuxt-link(:to="`/blog/${post.slug}/`") {{ post.date }} - {{ post.title }}
 </template>
 
 <script>
-import blog from 'blog-loader!~/blog.config.js'
-
 export default {
   async asyncData ({ app, params }) {
+    const blog = await import('blog-loader!~/blog.config.js')
     return {
       posts: blog
     }

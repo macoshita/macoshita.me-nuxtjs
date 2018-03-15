@@ -7,24 +7,15 @@ article
 </template>
 
 <script>
-import MarkdownIt from 'markdown-it'
-import fm from 'front-matter'
-const md = new MarkdownIt()
+import blogUtil from '~/utils/blog-util'
 
 export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
-    const date = slug.replace(/^(\d{4}-\d{2}-\d{2}).*/, '$1')
-    const data = await import(`raw-loader!~/blog/${slug}.md`)
-    const { attributes, body } = fm(data)
-    const title = attributes.title
-    const content = md.render(body)
+    const fmmd = await import(`raw-loader!~/blog/${slug}.md`)
+    const data = blogUtil.parse(slug, fmmd)
 
-    return {
-      title,
-      content,
-      date
-    }
+    return data
   }
 }
 </script>
