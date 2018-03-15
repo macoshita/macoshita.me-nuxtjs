@@ -11,9 +11,6 @@ import MarkdownIt from 'markdown-it'
 import fm from 'front-matter'
 const md = new MarkdownIt()
 
-import b from 'blog-loader!~/blog.config.js'
-console.log(b)
-
 export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
