@@ -21,7 +21,7 @@ async function main(source) {
     return {
       slug: path.basename(f, '.md')
     }
-  })
+  }).sort((a, b) => a < b)
 
   return `module.exports=${JSON.stringify(names)}`
 }
