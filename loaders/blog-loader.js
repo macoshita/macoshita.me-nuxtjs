@@ -1,11 +1,10 @@
 const fs = require('fs')
-const util = require('util')
-const readFile = util.promisify(fs.readFile)
+const readFile = require('util').promisify(fs.readFile)
 const path = require('path')
 const loaderUtils = require('loader-utils')
 const globby = require('globby')
 const Module = require("module")
-const blogUtil = require('../utils/blog-util')
+const util = require('./util')
 
 function exec(code, filename) {
   const module = new Module(filename, this)
@@ -25,7 +24,7 @@ async function main(source) {
   const jobs = files.map(async function (f) {
     const fmmd = await readFile(path.join(cwd, f), 'utf8')
     const slug = path.basename(f, '.md')
-    const { date, title } = blogUtil.parse(slug, fmmd)
+    const { date, title } = util.parse(slug, fmmd)
 
     return {
       slug,

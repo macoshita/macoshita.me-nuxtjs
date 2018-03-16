@@ -1,9 +1,9 @@
 const path = require('path')
-const blogUtil = require('../utils/blog-util')
+const util = require('./util')
 
 module.exports = function (source) {
   const slug = path.basename(this.resource, '.md')
-  const data = blogUtil.parse(slug, source)
+  const data = util.parse(slug, source)
 
   return `module.exports=${JSON.stringify(data)}`
 }
