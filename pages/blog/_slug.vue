@@ -7,15 +7,10 @@ article
 </template>
 
 <script>
-import blogUtil from '~/utils/blog-util'
-
 export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
-    const fmmd = await import(`raw-loader!~/blog/${slug}.md`)
-    const data = blogUtil.parse(slug, fmmd)
-
-    return data
+    return await import(`fmmd-loader!~/blog/${slug}.md`)
   }
 }
 </script>
