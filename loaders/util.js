@@ -1,29 +1,22 @@
-// This code must work for Node V8 **no babel** and Browser
-const MarkdownIt = require('markdown-it')
 const fm = require('front-matter')
+const MarkdownIt = require('markdown-it')
 const Prism = require('prismjs')
 require('prismjs/components/prism-javascript')
-
-const langMap = new Map([
-  ['js', 'javascript'],
-  ['javascript', 'javascript']
-])
 
 const md = new MarkdownIt({
   breaks: true,
   linkify: true,
   highlight (str, lang) {
-    const l = langMap.get(lang) || lang
     let hl
 
     try {
-      hl = Prism.highlight(str, Prism.languages[l])
+      hl = Prism.highlight(str, Prism.languages[lang])
     } catch (error) {
       console.error(error)
       hl = md.utils.escapeHtml(str)
     }
 
-    return `<pre class="language-${l}"><code class="language-${l}">${hl}</code></pre>`
+    return `<pre class="language-${lang}"><code class="language-${lang}">${hl}</code></pre>`
   }
 })
 

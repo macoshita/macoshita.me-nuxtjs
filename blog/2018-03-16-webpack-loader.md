@@ -20,7 +20,7 @@ title: オレオレ webpack loader 作って nuxt に導入するメモ
 
 オレオレ hoge-loader を loaders において、下記のような設定を書く
 
-```javascript
+```js
 module.exports = {
   build: {
     extend (config) {
