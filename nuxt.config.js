@@ -2,6 +2,13 @@ const path = require('path')
 const globby = require('globby')
 
 module.exports = {
+  meta: {
+    name: '虫けらロック',
+    description: 'macoshita のブログ'
+  },
+  modules: [
+    '@nuxtjs/pwa'
+  ],
   generate: {
     async routes () {
       const paths = await globby('*', { cwd: './blog/' })
