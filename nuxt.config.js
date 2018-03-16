@@ -2,9 +2,6 @@ const path = require('path')
 const globby = require('globby')
 
 module.exports = {
-  modules: [
-    '@nuxtjs/axios',
-  ],
   generate: {
     async routes () {
       const paths = await globby('*', { cwd: './blog/' })
