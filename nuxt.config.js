@@ -6,6 +6,9 @@ module.exports = {
     name: '虫けらロック',
     description: 'macoshita のブログ'
   },
+  manifest: {
+    short_name: '虫けらロック'
+  },
   modules: [
     '@nuxtjs/pwa'
   ],
