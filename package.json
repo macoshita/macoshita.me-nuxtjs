@@ -16,7 +16,8 @@
     "@nuxtjs/axios": "^5.1.1",
     "front-matter": "^2.3.0",
     "markdown-it": "^8.4.1",
-    "nuxt": "^1.4.0"
+    "nuxt": "^1.4.0",
+    "prismjs": "^1.12.2"
   },
   "devDependencies": {
     "globby": "^8.0.1",
