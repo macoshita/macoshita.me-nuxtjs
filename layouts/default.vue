@@ -2,7 +2,7 @@
 .container
   header
     h1
-      nuxt-link(to="/") 虫けらロック
+      nuxt-link(to="/") @macoshita
   main
     nuxt
 </template>

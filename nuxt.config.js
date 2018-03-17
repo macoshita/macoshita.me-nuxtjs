@@ -3,11 +3,11 @@ const globby = require('globby')
 
 module.exports = {
   meta: {
-    name: '虫けらロック',
-    description: 'macoshita のブログ'
+    name: '@macoshita',
+    description: '@macoshita website',
   },
   manifest: {
-    short_name: '虫けらロック'
+    short_name: '@macoshita'
   },
   modules: [
     '@nuxtjs/pwa'
