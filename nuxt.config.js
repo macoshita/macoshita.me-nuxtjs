@@ -10,6 +10,7 @@ module.exports = {
   meta: {
     name: '@macoshita',
     description: '@macoshita website',
+    lang: 'ja'
   },
   manifest: {
     short_name: '@macoshita'

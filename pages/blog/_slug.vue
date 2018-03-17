@@ -16,6 +16,9 @@ export default {
   head () {
     return {
       title: this.title,
+      htmlAttrs: {
+        lang: this.lang || 'ja'
+      }
     }
   }
 }
