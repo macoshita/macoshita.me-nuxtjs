@@ -1,19 +1,20 @@
 const path = require('path')
 const globby = require('globby')
+const SITE_NAME = 'macoshita'
 
 module.exports = {
   head: {
     titleTemplate (chunk) {
-      return chunk ? `${chunk} - @macoshita` : `@macoshita`
+      return chunk ? `${chunk} - macoshita` : 'macoshita'
     }
   },
   meta: {
-    name: '@macoshita',
-    description: '@macoshita website',
+    name: SITE_NAME,
+    description: `${SITE_NAME} website`,
     lang: 'ja'
   },
   manifest: {
-    short_name: '@macoshita'
+    short_name: SITE_NAME
   },
   modules: [
     '@nuxtjs/pwa'
