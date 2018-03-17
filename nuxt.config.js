@@ -2,6 +2,11 @@ const path = require('path')
 const globby = require('globby')
 
 module.exports = {
+  head: {
+    titleTemplate (chunk) {
+      return chunk ? `${chunk} - @macoshita` : `@macoshita`
+    }
+  },
   meta: {
     name: '@macoshita',
     description: '@macoshita website',

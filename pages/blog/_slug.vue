@@ -11,6 +11,12 @@ export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
     return await import(`fmmd-loader!~/blog/${slug}.md`)
+  },
+
+  head () {
+    return {
+      title: this.title,
+    }
   }
 }
 </script>
