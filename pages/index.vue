@@ -1,10 +1,11 @@
 <template lang="pug">
-article
-  header
-    h2 blog
-  ul
-    li(v-for="post in posts", :key="post.slug")
-      nuxt-link(:to="`/blog/${post.slug}/`") {{ post.date }} - {{ post.title }}
+main
+  article
+    header
+      h2 blog
+    ul
+      li(v-for="post in posts", :key="post.slug")
+        nuxt-link(:to="`/blog/${post.slug}/`") {{ post.date }} - {{ post.title }}
 </template>
 
 <script>

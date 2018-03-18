@@ -1,9 +1,10 @@
 <template lang="pug">
-article
-  header
-    h2 {{ title }}
-    time {{ date }}
-  div(v-html="content")
+main
+  article
+    header
+      h2 {{ title }}
+      time {{ date }}
+    div(v-html="content")
 </template>
 
 <script>
