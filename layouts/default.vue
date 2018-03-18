@@ -6,3 +6,8 @@
   main
     nuxt
 </template>
+
+<style lang="sass">
+html, body
+  font-family: system-ui, sans-serif;
+</style>
