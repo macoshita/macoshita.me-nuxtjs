@@ -4,7 +4,6 @@ require('prismjs/components/prism-javascript')
 
 const md = new MarkdownIt({
   breaks: true,
-  linkify: true,
   highlight (str, lang) {
     let hl
 
