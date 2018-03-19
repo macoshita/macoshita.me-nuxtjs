@@ -1,4 +1,5 @@
 const MarkdownIt = require('markdown-it')
+const emoji = require('markdown-it-emoji')
 const Prism = require('prismjs')
 require('prismjs/components/prism-javascript')
 
@@ -17,5 +18,7 @@ const md = new MarkdownIt({
     return `<pre class="language-${lang}"><code class="language-${lang}">${hl}</code></pre>`
   }
 })
+
+md.use(emoji)
 
 module.exports = md
