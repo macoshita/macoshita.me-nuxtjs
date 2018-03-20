@@ -13,6 +13,7 @@
   "author": "macoshita <macoshita@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@nuxtjs/google-tag-manager": "^1.1.0",
     "@nuxtjs/pwa": "^2.0.8",
     "front-matter": "^2.3.0",
     "markdown-it": "^8.4.1",

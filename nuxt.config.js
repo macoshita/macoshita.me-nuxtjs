@@ -17,7 +17,8 @@ module.exports = {
     short_name: SITE_NAME
   },
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    [ '@nuxtjs/google-tag-manager', { id: 'GTM-WX4VWRQ' } ],
   ],
   generate: {
     async routes () {
