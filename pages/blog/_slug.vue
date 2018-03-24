@@ -26,5 +26,5 @@ export default {
 </script>
 
 <style>
-@import '~/node_modules/prismjs/themes/prism-okaidia.css'
+@import '~/node_modules/prismjs/themes/prism.css'
 </style>
