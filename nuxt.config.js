@@ -14,7 +14,8 @@ module.exports = {
     lang: 'ja'
   },
   manifest: {
-    short_name: SITE_NAME
+    short_name: SITE_NAME,
+    display: 'browser'
   },
   modules: [
     '@nuxtjs/pwa',
