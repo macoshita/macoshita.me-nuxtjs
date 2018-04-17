@@ -4,7 +4,7 @@ main
     header
       h2 {{ title }}
       time {{ date }}
-    div(v-html="content")
+    div(v-html="content", :class="$style.content")
 </template>
 
 <script>
@@ -26,5 +26,13 @@ export default {
 </script>
 
 <style>
-@import '~/node_modules/prismjs/themes/prism.css'
+@import '~/node_modules/prismjs/themes/prism.css';
+</style>
+
+<style module>
+.content {
+  & img {
+    max-width: 100%;
+  }
+}
 </style>
