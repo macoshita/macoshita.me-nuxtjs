@@ -8,6 +8,7 @@ main
       li: a(href="https://twitter.com/macoshita") Twitter
       li: a(href="https://fb.com/takahiro.yamakoshi") Facebook
       li: a(href="https://github.com/macoshita") GitHub
+      li: a(href="https://qiita.com/macoshita") Qiita
   article
     header
       h2 Personal Projects
