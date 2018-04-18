@@ -18,18 +18,23 @@ async function main(source) {
     const { slug, date } = util.parseFilePath(f)
     const { attributes } = fm(fmmd)
 
-    return {
-      slug,
-      date,
-      ...attributes
+    if (attributes.draft) {
+      return null
+    } else {
+      return {
+        slug,
+        date,
+        ...attributes
+      }
     }
   })
 
   const posts = await Promise.all(jobs)
+  const filtered = posts.filter(o => !!o)
 
-  posts.sort((a, b) => a.date < b.date)
+  filtered.sort((a, b) => a.date < b.date)
 
-  return `module.exports=${JSON.stringify(posts)}`
+  return `module.exports=${JSON.stringify(filtered)}`
 }
 
 module.exports = function (source) {
