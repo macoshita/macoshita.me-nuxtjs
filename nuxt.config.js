@@ -4,9 +4,7 @@ const SITE_NAME = 'macoshita'
 
 module.exports = {
   head: {
-    titleTemplate (chunk) {
-      return chunk ? `${chunk} - macoshita` : 'macoshita'
-    }
+    titleTemplate: chunk => chunk ? `${chunk} - macoshita` : 'macoshita'
   },
   meta: {
     name: SITE_NAME,

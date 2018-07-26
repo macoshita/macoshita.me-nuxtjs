@@ -13,19 +13,19 @@
   "author": "macoshita <macoshita@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/google-tag-manager": "^1.1.0",
+    "@nuxtjs/google-tag-manager": "^1.2.0",
     "@nuxtjs/pwa": "^2.0.8",
     "front-matter": "^2.3.0",
-    "markdown-it": "^8.4.1",
-    "nuxt": "^1.4.0",
-    "prismjs": "^1.12.2"
+    "markdown-it": "^8.4.2",
+    "nuxt": "^1.4.1",
+    "prismjs": "^1.15.0"
   },
   "devDependencies": {
     "globby": "^8.0.1",
     "markdown-it-emoji": "^1.4.0",
-    "npm-run-all": "^4.1.2",
-    "pug": "^2.0.1",
-    "pug-loader": "^2.3.0",
+    "npm-run-all": "^4.1.3",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
     "push-dir": "^0.4.1",
     "raw-loader": "^0.5.1"
   }
