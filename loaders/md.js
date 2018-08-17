@@ -1,8 +1,7 @@
 const MarkdownIt = require('markdown-it')
 const emoji = require('markdown-it-emoji')
 const Prism = require('prismjs')
-require('prismjs/components/prism-javascript')
-require('prismjs/components/prism-rust')
+require('prismjs/components/index')()
 
 const md = new MarkdownIt({
   breaks: true,
