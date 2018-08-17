@@ -9,10 +9,14 @@ const md = new MarkdownIt({
   highlight (str, lang) {
     let hl
 
-    try {
-      hl = Prism.highlight(str, Prism.languages[lang])
-    } catch (error) {
-      console.error(error)
+    if (lang && Object.keys(Prism.languages).includes(lang)) {
+      try {
+        hl = Prism.highlight(str, Prism.languages[lang])
+      } catch (error) {
+        console.error(str, lang, error)
+      }
+    } else {
+      lang = '__plain__'
       hl = md.utils.escapeHtml(str)
     }
 
