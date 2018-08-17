@@ -8,10 +8,9 @@ const util = require('./util')
 
 async function main(source) {
   const options = loaderUtils.getOptions(this)
-  const config = util.exec.call(this, source, this.resource)
-  const cwd = path.resolve(__dirname, '..', config.dir)
-
-  const files = await globby('*.md', { cwd })
+  const { pattern } = util.exec.call(this, source, this.resource)
+  const cwd = path.resolve(this.resource, '..')
+  const files = await globby(pattern, { cwd })
 
   const jobs = files.map(async function (f) {
     const fmmd = await readFile(path.join(cwd, f), 'utf8')

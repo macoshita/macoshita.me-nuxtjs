@@ -37,7 +37,7 @@ export default {
     }
   },
   async asyncData ({ app, params }) {
-    const blog = await import('blog-loader!~/blog.config.js')
+    const blog = await import('!blog-loader!~/blog/index.js')
     return {
       posts: blog
     }

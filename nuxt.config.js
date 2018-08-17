@@ -21,7 +21,7 @@ module.exports = {
   ],
   generate: {
     async routes () {
-      const paths = await globby('*', { cwd: './blog/' })
+      const paths = await globby('*.md', { cwd: './blog/' })
       return paths.map(p => '/blog/' + p.replace(/\.md$/, ''))
     }
   },
