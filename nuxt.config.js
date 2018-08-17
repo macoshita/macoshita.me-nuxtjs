@@ -29,5 +29,12 @@ module.exports = {
     extend (config) {
       config.resolveLoader.modules.push(path.resolve(__dirname, 'loaders'))
     }
+  },
+  render: {
+    bundleRenderer: {
+      shouldPrefetch (file, type) {
+        return type !== 'script' || !/^page-\d+/.test(file)
+      }
+    }
   }
 }

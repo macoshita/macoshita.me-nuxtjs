@@ -11,7 +11,7 @@ main
 export default {
   async asyncData ({ app, params }) {
     const slug = params.slug
-    return await import(`fmmd-loader!~/blog/${slug}.md`)
+    return await import(/* webpackChunkName: 'page-[index]' */ `!fmmd-loader!~/blog/${slug}.md`)
   },
 
   head () {

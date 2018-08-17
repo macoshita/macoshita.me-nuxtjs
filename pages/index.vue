@@ -37,7 +37,7 @@ export default {
     }
   },
   async asyncData ({ app, params }) {
-    const blog = await import('!blog-loader!~/blog/index.js')
+    const blog = await import(/* webpackChunkName: 'posts' */ '!blog-loader!~/blog/index.js')
     return {
       posts: blog
     }
